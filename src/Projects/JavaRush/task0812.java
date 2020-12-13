@@ -9,25 +9,25 @@ package Projects.JavaRush;
 Искомое значение равно 3, т.к. самая длинная последовательность повторяющихся чисел состоит из трех четверок.
  */
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class task0812 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         ArrayList<Integer> arrayList = new ArrayList<>();
 
-        arrayList.add(2);
-        arrayList.add(4);
-        arrayList.add(4);
-        arrayList.add(4);
-        arrayList.add(8);
-        arrayList.add(8);
-        arrayList.add(4);
-        arrayList.add(12);
-        arrayList.add(12);
-        arrayList.add(14);
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
-        int number = 0;
-        for (int i = 0; i < arrayList.size() -1; i++){
+
+        for (int i = 0; i < 10; i++){
+           int s = Integer.parseInt(bufferedReader.readLine());
+           arrayList.add(s);
+        }
+
+        int number = 1;
+        for (int i = 0; i < arrayList.size() - 1; i++){
             if (arrayList.get(i).equals(arrayList.get(i + 1))){
                 number++;
             }
