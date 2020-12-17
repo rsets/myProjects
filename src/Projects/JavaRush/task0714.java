@@ -24,5 +24,6 @@ public class task0714 {
         for (int i = arrayList.size() - 1; i >= 0; i--){
             System.out.println(arrayList.get(i));
         }
+
     }
 }
